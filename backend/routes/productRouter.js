@@ -1,10 +1,10 @@
 import { Router } from "express";
-import { get } from "mongoose";
-import { getPrducts } from "../controllers/productController.js";
+import { createProduct, getPrducts } from "../controllers/productController.js";
 
 let router = Router();
 
 router.get("/", getPrducts)
+router.post("/", createProduct)
 
 
 export default router;

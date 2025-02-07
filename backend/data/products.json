@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Wireless Bluetooth Headphones",
+        "price": 2999,
+        "description": "High-quality wireless Bluetooth headphones with noise cancellation.",
+        "ratings": 4.5,
+        "images": [
+            {
+                "image": "https://example.com/headphones.jpg"
+            }
+        ],
+        "categories": "Headphones",
+        "seller": "TechStore",
+        "stock": 15,
+        "numOfReviews": 8,
+        "reviews": []
+    },
+    {
+        "name": "Gaming Laptop",
+        "price": 74999,
+        "description": "Powerful gaming laptop with RTX 3070 and 16GB RAM.",
+        "ratings": 4.8,
+        "images": [
+            {
+                "image": "https://example.com/laptop.jpg"
+            }
+        ],
+        "categories": "Laptops",
+        "seller": "GamerWorld",
+        "stock": 5,
+        "numOfReviews": 12,
+        "reviews": []
+    },
+    {
+        "name": "Digital Camera",
+        "price": 15999,
+        "description": "High-resolution digital camera with 4K video recording and optical zoom.",
+        "ratings": 4.6,
+        "images": [
+            {
+                "image": "https://example.com/camera.jpg"
+            }
+        ],
+        "categories": "Cameras",
+        "seller": "PhotoGear",
+        "stock": 10,
+        "numOfReviews": 6,
+        "reviews": []
+    },
+    {
+        "name": "Sports Running Shoes",
+        "price": 2499,
+        "description": "Comfortable and lightweight running shoes for daily workouts.",
+        "ratings": 4.3,
+        "images": [
+            {
+                "image": "https://example.com/shoes.jpg"
+            }
+        ],
+        "categories": "Clothes/Shoes",
+        "seller": "FitWear",
+        "stock": 20,
+        "numOfReviews": 15,
+        "reviews": []
+    },
+    {
+        "name": "Smart LED TV",
+        "price": 40999,
+        "description": "55-inch 4K Ultra HD Smart LED TV with HDR and voice control.",
+        "ratings": 4.7,
+        "images": [
+            {
+                "image": "https://example.com/tv.jpg"
+            }
+        ],
+        "categories": "Electronics",
+        "seller": "HomeTech",
+        "stock": 7,
+        "numOfReviews": 9,
+        "reviews": []
+    }
+]
