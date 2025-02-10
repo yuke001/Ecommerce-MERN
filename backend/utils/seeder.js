@@ -1,7 +1,13 @@
-import products from "../data/products.json"
 import Product from "../model/productModel.js"
+// import products from "../data/products.json" assert { type: "json" };
+
 import dotenv from "dotenv"
 import db from "../config/db.js"
+
+import { readFileSync } from "fs";
+
+const products = JSON.parse(readFileSync(new URL("../data/products.json", import.meta.url), "utf-8"));
+
 
 dotenv.config()
 db()
