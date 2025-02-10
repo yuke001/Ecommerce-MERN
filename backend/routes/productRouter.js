@@ -1,11 +1,17 @@
 import { Router } from "express";
-import { createProduct, getPrducts, getSingleProduct } from "../controllers/productController.js";
+import { createProduct, getPrducts, getSingleProduct, updateProduct } from "../controllers/productController.js";
 
 let router = Router();
 
+
+router.post("/", createProduct)
+
 router.get("/", getPrducts)
 router.get("/:id", getSingleProduct)
-router.post("/", createProduct)
+
+router.put("/:id", updateProduct)
+
+
 
 
 export default router;
