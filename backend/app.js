@@ -2,41 +2,24 @@ import express from "express";
 import dotenv from "dotenv";
 import db from "./config/db.js";
 import productRouter from "./routes/productRouter.js";
+import { errorHandler } from "./middlewares/errorHandler.js";
 
+/// Config
 dotenv.config();
 
+// Database connection
 db();
 
+// Express app
 let app = express();
 
 // Middleware
 app.use(express.json());
 
+// Routes
 app.use("/api/v1/products", productRouter);
 
 //global error handler
-app.use((err, req, res, next) => {
-  let statusCode = err.statusCode || 500;
-  let message = err.message || "Something went wrong!!Please try again Later";
-
-  if (process.env.NODE_ENV === "development") {
-    let message = err.message || "Something went wrong!!Please try again Later";
-    return res.status(statusCode).json({
-      status: "Failure",
-      message,
-      stack: err.stack,
-      error: err,
-    });
-  }
-
-  if (process.env.NODE_ENV === "production") {
-    let message = err.message || "Something went wrong!!Please try again Later";
-
-    return res.status(statusCode).json({
-      status: "Failure",
-      message,
-    });
-  }
-});
+app.use(errorHandler);
 
 export default app;
