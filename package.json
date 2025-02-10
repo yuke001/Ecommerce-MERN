@@ -4,11 +4,10 @@
   "description": "Ecommerce using MERN stack",
   "main": "server.js",
   "scripts": {
-    "start":"nodemon backend/server.js",
-    "dev":"set NODE_ENV=development && nodemon backend/server.js",
-    "prod":"set NODE_ENV=production && nodemon backend/server.js",
-    "seeder":"node backend/utils/seeder.js"
-
+    "start": "nodemon backend/server.js",
+    "dev": "set NODE_ENV=development&&nodemon backend/server.js",
+    "prod": "set NODE_ENV=production&&nodemon backend/server.js",
+    "seeder": "node backend/utils/seeder.js"
   },
   "author": "yukenthiran",
   "license": "ISC",
@@ -16,6 +15,7 @@
   "dependencies": {
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "express-async-handler": "^1.2.0",
     "mongoose": "^8.10.0"
   },
   "devDependencies": {
