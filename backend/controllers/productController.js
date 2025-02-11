@@ -1,5 +1,6 @@
 import Product from "../model/productModel.js";
 import asyncHandler from "express-async-handler";
+import APIFeatures from "../utils/apiFeatures.js";
 
 // create product - /api/v1/products
 export const createProduct = asyncHandler(async (req, res, next) => {
@@ -32,7 +33,10 @@ export const createProduct = asyncHandler(async (req, res, next) => {
 
 // get all products - api/v1/products
 export const getPrducts = asyncHandler(async (req, res, next) => {
-  const products = await Product.find();
+  
+  const apiFeatures = new APIFeatures(Product.find(), req.query).search();
+
+  const products = await apiFeatures.query;
 
   res.status(200).json({
     success: true,
