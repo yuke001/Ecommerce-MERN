@@ -34,7 +34,7 @@ export const createProduct = asyncHandler(async (req, res, next) => {
 // get all products - api/v1/products
 export const getPrducts = asyncHandler(async (req, res, next) => {
   
-  const apiFeatures = new APIFeatures(Product.find(), req.query).search();
+  const apiFeatures = new APIFeatures(Product.find(), req.query).search().filter();
 
   const products = await apiFeatures.query;
 
